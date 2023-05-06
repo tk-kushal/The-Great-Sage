@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database</title>
+  <script src="https://kit.fontawesome.com/55cb3d04da.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <form>
+    <label for="skill-name">Skill Name:</label>
+    <input type="text" id="skill-name" name="skill-name"><br><br>
+
+    
+    <label for="prereq-skills">Prerequisite Skills:</label>
+    <input type="text" id="prereq-skills" name="prereq-skills[]" required>
+    <div id="prereqArray" class="prereqArray">
+    </div>
+    <button type="button" id="morePrereq"><i class="fa-solid fa-plus"></i></button>
+    <button type="button" id="lessPrereq"><i class="fa-solid fa-minus"></i></button>
+    
+    
+    
+    <br><br>
+
+    <label for="description">Short Description:</label>
+    <!-- <input type="text" id="description" name="description"><br><br> -->
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+<script src="data.js" type="module"></script>
+
+</html>

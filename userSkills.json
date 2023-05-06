@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "id": "Public Speaking"
+    },
+    {
+      "id": "Maths"
+    },
+    {
+      "id": "communication"
+    },
+    {
+      "id": "HTML"
+    },
+    {
+      "id": "CSS"
+    },
+    {
+      "id": "JavaScript"
+    },
+    {
+      "id": "React"
+    },
+    {
+      "id":"computers"
+    }
+  ]
+}
