@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  background-color: rgb(26, 24, 32);
+  color: white;
+}
+svg {
+  background-color: rgb(26, 24, 32);
+}
+.skills {
+  transition: 300ms ease;
+  transition-property: opacity;
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 5px;
+}
+.link {
+  transition: 300ms ease;
+  transition-property: opacity;
+  stroke-opacity: 1;
+}
+.label {
+  pointer-events: none;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  fill: white;
+}
+.graph {
+  width: 100%;
+  height: 100%;
+}
+.graphContainer {
+  height: 100vh;
+  width: 100%;
+}
+.navbar {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.244);
+}
+.logo {
+  padding: 10px 15px;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  border: 3px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.075);
+  background: rgba(255, 255, 255, 0.135);
+  height: max-content;
+  width: max-content;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.toggleButton {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 3px;
+  height: 36px;
+  width: max-content;
+  left: 47%;
+  background-color: rgba(255, 255, 255, 0.076);
+  border-radius: 40px;
+}
+.worldGraphBtn,
+.userGraphBtn {
+  box-sizing: border-box;
+  display: flex;
+  margin: 5px 10px;
+  width: max-content;
+  height: 30px;
+  justify-content: center;
+  cursor: pointer;
+  transition: 300ms ease;
+  font-weight: 600;
+}
+.toggleBackdrop {
+  margin-top: -1px;
+  position: absolute;
+  width: 70px;
+  height: 31px;
+  background-color: rgba(255, 255, 255, 0.233);
+  border-radius: 20px;
+  z-index: -1;
+  transition: 300ms ease;
+  transition-property: transform;
+}
+.toggleBackdropOn {
+  transform: translateX(69px);
+  width: 113px;
+  transition: 300ms ease;
+  transition-property: transform;
+}
+.bold {
+  color: #a0e4ff;
+}
+.signin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: 500px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.profile {
+  border-top: 1px solid rgba(255, 255, 255, 0.157);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  width: 97%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+}
+.left {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  pointer-events: none;
+}
+#profileImage {
+  width: 40px;
+  margin: 5px 10px;
+  border-radius: 50%;
+}
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  transition: 300ms ease;
+}
+.logout:hover {
+  transition: 300ms ease;
+  background-color: rgba(255, 255, 255, 0.113);
+  border-radius: 50%;
+}
+.signedIn {
+  padding-top: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.skillContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.157);
+}
+.addNewSkill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  border: 3px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.075);
+  background: rgba(255, 255, 255, 0.135);
+  height: max-content;
+  width: max-content;
+  margin: 10px;
+  border-radius: 30px;
+  transition: 300ms ease;
+}
+.addNewSkill:hover {
+  background: rgba(255, 255, 255, 0.246);
+}
+.skills {
+  padding-top: 10px;
+  width: 100%;
+}
+.skillInfo {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+  cursor: pointer;
+  transition: 300ms ease;
+  transition-property: background;
+}
+.skillInfo:hover {
+  transition: 50ms ease;
+  background: rgba(255, 255, 255, 0.135);
+}
+.addSkillSection {
+  height: 0%;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.157);
+  transition: 300ms ease;
+}
+.addSkillShow {
+  height: auto;
+  opacity: 1;
+}
+.skillInput {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  appearance: none;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.431);
+  outline: 3px solid whtie;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.599);
+  background: rgba(255, 255, 255, 0.135);
+  width: 100%;
+  box-sizing: border-box;
+}
+.skillInput:focus {
+  outline: none;
+  color: white;
+  border: 2px solid white;
+}
+.buttons {
+  display: flex;
+}
+#addPrerequisite {
+  height: 35px;
+  width: 35px;
+  font-size: 18px;
+  margin: 0;
+  margin-top: 10px;
+}
+#add,
+#cancel {
+  font-weight: 500;
+  height: 35px;
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.recommendations {
+  display: none;
+  position: absolute;
+  transform: translateY(50px);
+  background: #39373e;
+  width: 100%;
+}
+#description {
+  border-radius: 15px;
+  border-bottom-right-radius: 25px;
+}
+.opacity {
+  opacity: 0.3;
+}

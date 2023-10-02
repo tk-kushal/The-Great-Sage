@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Great Sage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ad418b86d4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        The Great Sage
+      </div>
+      <div class="signedIn">
+        <div class="skillContainer">
+          <div class="addNewSkill">
+            Add New Skill
+          </div>
+          <div class="addSkillSection">
+            <div class="recommendations">
+              <div class="recommendedElement">
+                Computers
+              </div>
+            </div>
+            <input
+              type="text"
+              placeholder="SkillName"
+              id="skillName"
+              class="skillInput"
+            />
+            <input type="text" placeholder="level" class="skillInput" id="skillLevel"/>
+            <textarea
+              name="description"
+              id="description"
+              class="skillInput"
+              placeholder="Description"
+              rows="3"
+            ></textarea>
+            <div class="prerequisites">
+              <input
+                type="text"
+                id="prerequisite1"
+                class="skillInput"
+                placeholder="prerequisite 1"
+              />
+              <input
+                type="text"
+                id="prerequisite2"
+                class="skillInput"
+                placeholder="prerequisite 2"
+              />
+            </div>
+            <div class="buttons">
+              <button class="addNewSkill" id="addPrerequisite">+</button>
+              <button class="addNewSkill" id="add">Add</button>
+              <button class="addNewSkill" id="cancel">Cancel</button>
+            </div>
+          </div>
+          <div class="skills"></div>
+        </div>
+        <div class="profile">
+          <div class="left">
+            <img src="" alt="" id="profileImage" />
+            <div id="userName"></div>
+          </div>
+          <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </div>
+        </div>
+      </div>
+      <div class="signin" style="display: none;">
+        <div class="text">Start Your Journey</div>
+        <button id="signinBtn" class="addNewSkill">Sign In</button>
+      </div>
+    </div>
+    <div class="graphContainer">
+      <div class="toggleButton">
+        <div class="toggleBackdrop"></div>
+        <div class="worldGraphBtn bold">
+          World
+        </div>
+        <div style="display: none;" class="userGraphBtn">
+          Your Graph
+        </div>
+      </div>
+      <svg class="graph">
+        <filter id="blurMe">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+        </filter>
+      </svg>
+    </div>
+  </body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="index.js" type="module"></script>
+</html>
